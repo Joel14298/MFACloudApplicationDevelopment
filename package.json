@@ -1,0 +1,35 @@
+{
+  "name": "safebusiness",
+  "version": "1.0.0",
+  "description": "Application for multi factor authentication on IBM cloud",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "ibmcloud-appid": "^6.1.1",
+    "mongodb": "^3.6.6",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " nodemon run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joel14298/MFACloudApplicationDevelopment.git"
+  },
+  "keywords": [
+    "Multi-factor",
+    "authentication",
+    "cloud",
+    "application",
+    "website"
+  ],
+  "author": "Joel Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joel14298/MFACloudApplicationDevelopment/issues"
+  },
+  "homepage": "https://github.com/Joel14298/MFACloudApplicationDevelopment#readme"
+}
