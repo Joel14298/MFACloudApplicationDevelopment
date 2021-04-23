@@ -1,4 +1,4 @@
 applications:
 - name: Safe-Business-Multifactor-Authentication
   random-route: true
-  memory: 128M
+  memory: 64M

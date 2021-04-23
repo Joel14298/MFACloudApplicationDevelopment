@@ -39,4 +39,4 @@ app.post("/", function (req, res) {
   client.close();
 });
 
-// require("cf-deployment-tracker-client").track();
+require("cf-deployment-tracker-client").track();

@@ -4,6 +4,7 @@
   "description": "Application for multi factor authentication on IBM cloud",
   "main": "index.js",
   "dependencies": {
+    "cf-deployment-tracker-client": "*",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "ibmcloud-appid": "^6.1.1",
