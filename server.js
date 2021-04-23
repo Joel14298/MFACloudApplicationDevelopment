@@ -27,6 +27,8 @@ var port = process.env.PORT || 8082;
 app.use(express.static(__dirname + "/public"));
 
 app.use("/", routes({ client }));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./views"));
 
 app.listen(port);
 console.log("Listening to port", port);
@@ -34,9 +36,23 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/", function (req, res) {
-  console.log();
   res.json({ message: "ok" });
+
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
   client.close();
 });
+
+app.get("/about", function (req, res) {
+  res.render("/about");
+});
+
+app.get("*", function (req, res) {
+  res.render("error");
+});
+
+// app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME));
 
 require("cf-deployment-tracker-client").track();
